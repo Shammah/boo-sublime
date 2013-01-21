@@ -9,7 +9,7 @@
 	<key>settings</key>
 	<dict>
 		<key>decreaseIndentPattern</key>
-		<string>^\s*(elif|else|except|ensure|get|set|otherwise)\b.*:</string>
+		<string>^\s*(elif|else|except|ensure|set|otherwise)\b.*:</string>
 		<key>increaseIndentPattern</key>
 		<string>^\s*\b.+:\s*$</string>
 	</dict>
