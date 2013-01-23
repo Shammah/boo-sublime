@@ -130,7 +130,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b([a-z_]+[A-Za-z_0-9]*( as ([A-Z]+[A-Za-z]*)))\b</string>
+			<string>\b([a-z_]+[A-Za-z_0-9]*( as ([A-Z]+[A-Za-z_0-9]*)))\b</string>
 		</dict>
 		<dict>
 			<key>match</key>

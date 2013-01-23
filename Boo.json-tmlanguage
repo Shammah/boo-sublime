@@ -69,7 +69,7 @@
 	  },
 
 	  {
-	     "match": "\\b([a-z_]+[A-Za-z_0-9]*( as ([A-Z]+[A-Za-z]*)))\\b",
+	     "match": "\\b([a-z_]+[A-Za-z_0-9]*( as ([A-Z]+[A-Za-z_0-9]*)))\\b",
 	     "captures": {
 	         "1": { "name": "variable.parameter.source.boo" },
 	         "2": { "name": "keyword.operator.source.boo" },
