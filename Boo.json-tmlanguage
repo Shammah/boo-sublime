@@ -4,7 +4,7 @@
   "patterns": [
 
 	  {  "name": "keyword.control.source.boo",
-	     "match": "\\b(import|from|if|else|elif|unless|for|in|while|continue|break|pass|return|class|interface|def|override|struct|namespace|enum|try|except|ensure|assert|yield|callable|goto|virtual|get|set|of|ref|unsafe|new|match|case|otherwise|debug|using|lock|block|macro)\\b"
+	     "match": "\\b(import|from|if|else|elif|unless|for|in|while|continue|break|pass|return|class|interface|def|override|struct|namespace|enum|try|raise|except|ensure|assert|yield|callable|goto|virtual|get|set|of|ref|unsafe|new|match|case|otherwise|debug|using|lock|block|macro|self)\\b"
 	  },
 
 	  {  "name": "keyword.operator.source.boo",
@@ -60,12 +60,8 @@
 	     "match": "\\b(public|protected|internal|private|abstract|final|static|partial)\\b"
 	  },
 
-	  {  "name": "variable.language.source.boo",
-	     "match": "\\b(self|super)\\b"
-	  },
-
 	  {  "name": "support.function.source.boo",
-	     "match": "\\b(print|gets|prompt|join|map|array|matrix|iterator|shellp|shell|shellm|enemurate|range|reversed|zip|cat|typeof|sizeof)\\b"
+	     "match": "\\b(print|gets|prompt|join|map|array|matrix|iterator|shellp|shell|shellm|super|enemurate|range|reversed|zip|cat|typeof|sizeof)\\b"
 	  },
 
 	  {
