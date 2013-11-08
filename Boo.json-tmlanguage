@@ -53,7 +53,7 @@
 	  },
 
 	  {  "name": "storage.type.source.boo",
-	     "match": "\\b(sbyte|short|int|long|byte|ushort|uint|ulong|single|double|decimal|char|string|bool|object|duck)\\b"
+	     "match": "\\b(sbyte|short|int|long|byte|ushort|uint|ulong|single|double|decimal|char|string|bool|object|duck|date)\\b"
 	  },
 
 	  {  "name": "storage.modifier.source.boo",

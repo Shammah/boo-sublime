@@ -88,7 +88,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(sbyte|short|int|long|byte|ushort|uint|ulong|single|double|decimal|char|string|bool|object|duck)\b</string>
+			<string>\b(sbyte|short|int|long|byte|ushort|uint|ulong|single|double|decimal|char|string|bool|object|duck|date)\b</string>
 			<key>name</key>
 			<string>storage.type.source.boo</string>
 		</dict>
