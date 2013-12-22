@@ -12,6 +12,15 @@
 		<string>^\s*(elif|else|except|ensure|set|otherwise)\b.*:</string>
 		<key>increaseIndentPattern</key>
 		<string>^\s*\b.+:\s*$</string>
+		<key>shellVariables</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>TM_COMMENT_START</string>
+				<key>value</key>
+				<string>#</string>
+			</dict>
+		</array>
 	</dict>
 	<key>uuid</key>
 	<string>33477934-69D3-4713-8786-9B5211012C9A</string>
