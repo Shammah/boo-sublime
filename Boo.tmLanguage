@@ -132,6 +132,53 @@
 			<key>name</key>
 			<string>variable.parameter.source.boo</string>
 		</dict>
+		<dict>
+			<key>begin</key>
+			<string>^\s*(def)\s+(?=[A-Za-z_][A-Za-z0-9_]*)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.function.boo</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(\()|\s*($\n?|#.*$\n?)</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.parameters.begin.boo</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>invalid.illegal.missing-parameters.boo</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>meta.function.boo</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>(?=[A-Za-z_][A-Za-z0-9_]*)</string>
+					<key>contentName</key>
+					<string>entity.name.function.boo</string>
+					<key>end</key>
+					<string>(?![A-Za-z0-9_])</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#entity_name_function</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
 	</array>
 	<key>scopeName</key>
 	<string>source.boo</string>
