@@ -14,7 +14,7 @@
 	  },
 
 	  {  "name": "keyword.control.source.boo",
-	     "match": "\\b(import|from|if|else|elif|unless|for|in|while|continue|break|pass|return|namespace|try|raise|except|ensure|assert|yield|goto|get|set|of|ref|unsafe|new|match|case|otherwise|debug|using|lock|block|macro|self|event)\\b"
+	     "match": "\\b(import|from|if|else|elif|unless|for|in|while|continue|break|pass|return|namespace|try|raise|except|ensure|assert|yield|goto|get|set|of|ref|unsafe|new|match|case|otherwise|debug|using|lock|block|macro|self|event|property)\\b"
 	  },
 
 	  {
