@@ -12,7 +12,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>\b(import|from|if|else|elif|unless|for|in|while|continue|break|pass|return|override|struct|namespace|enum|try|raise|except|ensure|assert|yield|callable|goto|virtual|get|set|of|ref|unsafe|new|match|case|otherwise|debug|using|lock|block|macro|self|event)\b</string>
+			<string>\b(import|from|if|else|elif|unless|for|in|while|continue|break|pass|return|override|namespace|enum|try|raise|except|ensure|assert|yield|callable|goto|virtual|get|set|of|ref|unsafe|new|match|case|otherwise|debug|using|lock|block|macro|self|event)\b</string>
 			<key>name</key>
 			<string>keyword.control.source.boo</string>
 		</dict>
@@ -280,7 +280,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^\s*(class|interface)\s+(?=[a-zA-Z_][a-zA-Z_0-9]*\s*\:)</string>
+			<string>^\s*(class|interface|struct)\s+(?=[a-zA-Z_][a-zA-Z_0-9]*\s*\:)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -313,7 +313,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\b(class|interface)\s+(?=[a-zA-Z_][a-zA-Z_0-9]*\s*\()</string>
+			<string>\b(class|interface|struct)\s+(?=[a-zA-Z_][a-zA-Z_0-9]*\s*\()</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>

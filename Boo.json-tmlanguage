@@ -4,7 +4,7 @@
   "patterns": [
 
 	  {  "name": "keyword.control.source.boo",
-	     "match": "\\b(import|from|if|else|elif|unless|for|in|while|continue|break|pass|return|override|struct|namespace|enum|try|raise|except|ensure|assert|yield|callable|goto|virtual|get|set|of|ref|unsafe|new|match|case|otherwise|debug|using|lock|block|macro|self|event)\\b"
+	     "match": "\\b(import|from|if|else|elif|unless|for|in|while|continue|break|pass|return|override|namespace|enum|try|raise|except|ensure|assert|yield|callable|goto|virtual|get|set|of|ref|unsafe|new|match|case|otherwise|debug|using|lock|block|macro|self|event)\\b"
 	  },
 
 	  {
@@ -183,7 +183,7 @@
 	  },
 
 	  {
-	      "begin": "^\\s*(class|interface)\\s+(?=[a-zA-Z_][a-zA-Z_0-9]*\\s*\\:)",
+	      "begin": "^\\s*(class|interface|struct)\\s+(?=[a-zA-Z_][a-zA-Z_0-9]*\\s*\\:)",
 	      "beginCaptures": {
 	          "1": {
 	              "name": "storage.type.class.source.boo"
@@ -205,7 +205,7 @@
 	  },
 
 	  {
-	      "begin": "\\b(class|interface)\\s+(?=[a-zA-Z_][a-zA-Z_0-9]*\\s*\\()",
+	      "begin": "\\b(class|interface|struct)\\s+(?=[a-zA-Z_][a-zA-Z_0-9]*\\s*\\()",
 	      "beginCaptures": {
 	          "1": {
 	              "name": "storage.type.class.source.boo"
