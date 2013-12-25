@@ -28,7 +28,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(import|from|if|else|elif|unless|for|in|while|continue|break|pass|return|override|namespace|enum|try|raise|except|ensure|assert|yield|callable|goto|virtual|get|set|of|ref|unsafe|new|match|case|otherwise|debug|using|lock|block|macro|self|event)\b</string>
+			<string>\b(import|from|if|else|elif|unless|for|in|while|continue|break|pass|return|override|namespace|enum|try|raise|except|ensure|assert|yield|goto|virtual|get|set|of|ref|unsafe|new|match|case|otherwise|debug|using|lock|block|macro|self|event)\b</string>
 			<key>name</key>
 			<string>keyword.control.source.boo</string>
 		</dict>
@@ -205,6 +205,12 @@
 			</array>
 		</dict>
 		<dict>
+			<key>match</key>
+			<string>\b(Getter|Setter|Property)\b</string>
+			<key>name</key>
+			<string>storage.type.property.source.boo</string>
+		</dict>
+		<dict>
 			<key>begin</key>
 			<string>\b(def)\s+(?=[A-Za-z_][A-Za-z0-9_]*\s*\()</string>
 			<key>beginCaptures</key>
@@ -332,9 +338,83 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(def|constructor|destructor)\b</string>
+			<string>\b(def|do)\b</string>
+			<key>name</key>
+			<string>storage.type.closure.source.boo</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(constructor|destructor)\b</string>
 			<key>name</key>
 			<string>keyword.control.source.boo</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\b(callable)\s+(?=[A-Za-z_][A-Za-z0-9_]*\s*\()</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.callable.source.boo</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(\))</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.source.boo</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>meta.callable.source.boo</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>(?=[A-Za-z_][A-Za-z0-9_]*)</string>
+					<key>contentName</key>
+					<string>entity.name.callable.source.boo</string>
+					<key>end</key>
+					<string>(?![A-Za-z0-9_])</string>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>(\()</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.operator.source.boo</string>
+						</dict>
+					</dict>
+					<key>contentName</key>
+					<string>meta.callable.parameters.source.boo</string>
+					<key>end</key>
+					<string>(?=\)\s*\:?)</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#keyword_arguments</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>$self</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(callable)\b</string>
+			<key>name</key>
+			<string>storage.type.callable.source.boo</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -462,6 +542,12 @@
 					</array>
 				</dict>
 			</array>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(class|interface|struct)\b</string>
+			<key>name</key>
+			<string>storage.type.class.source.boo</string>
 		</dict>
 	</array>
 	<key>repository</key>

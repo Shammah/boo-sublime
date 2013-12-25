@@ -14,7 +14,7 @@
 	  },
 
 	  {  "name": "keyword.control.source.boo",
-	     "match": "\\b(import|from|if|else|elif|unless|for|in|while|continue|break|pass|return|override|namespace|enum|try|raise|except|ensure|assert|yield|callable|goto|virtual|get|set|of|ref|unsafe|new|match|case|otherwise|debug|using|lock|block|macro|self|event)\\b"
+	     "match": "\\b(import|from|if|else|elif|unless|for|in|while|continue|break|pass|return|override|namespace|enum|try|raise|except|ensure|assert|yield|goto|virtual|get|set|of|ref|unsafe|new|match|case|otherwise|debug|using|lock|block|macro|self|event)\\b"
 	  },
 
 	  {
@@ -132,6 +132,10 @@
              }
          ]
 	  },
+	  {
+	     "match": "\\b(Getter|Setter|Property)\\b",
+	     "name": "storage.type.property.source.boo"
+	  },
 
 	  {
          "begin": "\\b(def)\\s+(?=[A-Za-z_][A-Za-z0-9_]*\\s*\\()",
@@ -217,8 +221,57 @@
 	  },
 
 	  {
-	     "match": "\\b(def|constructor|destructor)\\b",
+	     "match": "\\b(def|do)\\b",
+	     "name": "storage.type.closure.source.boo"
+	  },
+	  {
+	     "match": "\\b(constructor|destructor)\\b",
 	     "name": "keyword.control.source.boo"
+	  },
+
+	  {
+         "begin": "\\b(callable)\\s+(?=[A-Za-z_][A-Za-z0-9_]*\\s*\\()",
+         "beginCaptures": {
+             "1": {
+                 "name": "storage.type.callable.source.boo"
+             }
+         },
+         "end": "(\\))",
+         "endCaptures": {
+             "1": {
+                 "name": "keyword.operator.source.boo"
+             }
+         },
+         "name": "meta.callable.source.boo",
+         "patterns": [
+             {
+                 "begin": "(?=[A-Za-z_][A-Za-z0-9_]*)",
+                 "contentName": "entity.name.callable.source.boo",
+                 "end": "(?![A-Za-z0-9_])"
+             },
+             {
+                 "begin": "(\\()",
+                 "beginCaptures": {
+                     "1": {
+                         "name": "keyword.operator.source.boo"
+                     }
+                 },
+                 "contentName": "meta.callable.parameters.source.boo",
+                 "end": "(?=\\)\\s*\\:?)",
+                 "patterns": [
+                     {
+                         "include": "#keyword_arguments"
+                     },
+                     {
+                         "include": "$self"
+                     }
+                 ]
+             }
+         ]
+	  },
+	  {
+	     "match": "\\b(callable)\\b",
+	     "name": "storage.type.callable.source.boo"
 	  },
 
 	  {
@@ -302,7 +355,12 @@
 	              ]
 	          }
 	      ]
-	  }
+	  },
+
+	  {
+	     "match": "\\b(class|interface|struct)\\b",
+	     "name": "storage.type.class.source.boo"
+	  },
   ],
   "repository": {
 	  "keyword_arguments": {
