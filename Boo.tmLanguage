@@ -11,6 +11,22 @@
 	<key>patterns</key>
 	<array>
 		<dict>
+			<key>begin</key>
+			<string>(#|//)</string>
+			<key>end</key>
+			<string>\n</string>
+			<key>name</key>
+			<string>comment.line.source.boo</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.block.source.boo</string>
+		</dict>
+		<dict>
 			<key>match</key>
 			<string>\b(import|from|if|else|elif|unless|for|in|while|continue|break|pass|return|override|namespace|enum|try|raise|except|ensure|assert|yield|callable|goto|virtual|get|set|of|ref|unsafe|new|match|case|otherwise|debug|using|lock|block|macro|self|event)\b</string>
 			<key>name</key>
@@ -57,22 +73,6 @@
 			<string>(\(|\)|\[|\]|{|}|:)</string>
 			<key>name</key>
 			<string>keyword.operator.source.boo</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>(#|//)</string>
-			<key>end</key>
-			<string>\n</string>
-			<key>name</key>
-			<string>comment.line.source.boo</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>/\*</string>
-			<key>end</key>
-			<string>\*/</string>
-			<key>name</key>
-			<string>comment.block.source.boo</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -144,6 +144,65 @@
 			</dict>
 			<key>match</key>
 			<string>\b([a-z_]+[A-Za-z_0-9]*\s+(as))\b</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(?&lt;=\[)\s*(Getter|Setter|Property)\s*(?=\()</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.property.source.boo</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(\))\s*(\])</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.source.boo</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.source.boo</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>meta.property.source.boo</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>(?&lt;=\()</string>
+					<key>contentName</key>
+					<string>meta.name.property.source.boo</string>
+					<key>end</key>
+					<string>(?=,|\))</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>begin</key>
+							<string>(?=[A-Za-z_][A-Za-z0-9_]*)</string>
+							<key>contentName</key>
+							<string>entity.name.function.source.boo</string>
+							<key>end</key>
+							<string>(?![A-Za-z0-9_])</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>$self</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>$self</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>begin</key>
