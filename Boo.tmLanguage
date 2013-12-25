@@ -28,7 +28,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(import|from|if|else|elif|unless|for|in|while|continue|break|pass|return|override|namespace|enum|try|raise|except|ensure|assert|yield|goto|virtual|get|set|of|ref|unsafe|new|match|case|otherwise|debug|using|lock|block|macro|self|event)\b</string>
+			<string>\b(import|from|if|else|elif|unless|for|in|while|continue|break|pass|return|override|namespace|try|raise|except|ensure|assert|yield|goto|virtual|get|set|of|ref|unsafe|new|match|case|otherwise|debug|using|lock|block|macro|self|event)\b</string>
 			<key>name</key>
 			<string>keyword.control.source.boo</string>
 		</dict>
@@ -112,7 +112,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(sbyte|short|int|long|byte|ushort|uint|ulong|single|double|decimal|char|string|bool|object|duck|date)\b</string>
+			<string>\b(sbyte|short|int|long|byte|ushort|uint|ulong|single|double|decimal|char|string|bool|object|duck|date|enum)\b</string>
 			<key>name</key>
 			<string>storage.type.source.boo</string>
 		</dict>
