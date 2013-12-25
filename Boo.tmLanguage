@@ -194,7 +194,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.inheritance.end.boo</string>
+					<string>keyword.operator.source.boo</string>
 				</dict>
 				<key>2</key>
 				<dict>
@@ -234,7 +234,7 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.inheritance.begin.boo</string>
+							<string>keyword.operator.source.boo</string>
 						</dict>
 					</dict>
 					<key>contentName</key>

@@ -113,7 +113,7 @@
 	      "end": "(\\))\\s*(?:(\\:)|(.*$\\n?))",
 	      "endCaptures": {
 	          "1": {
-	              "name": "punctuation.definition.inheritance.end.boo"
+	              "name": "keyword.operator.source.boo"
 	          },
 	          "2": {
 	              "name": "punctuation.section.class.begin.boo"
@@ -138,7 +138,7 @@
 	              "begin": "(\\()",
 	              "beginCaptures": {
 	                  "1": {
-	                      "name": "punctuation.definition.inheritance.begin.boo"
+	                      "name": "keyword.operator.source.boo"
 	                  }
 	              },
 	              "contentName": "meta.class.inheritance.boo",
