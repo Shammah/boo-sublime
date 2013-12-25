@@ -129,7 +129,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>storage.type.function.boo</string>
+					<string>storage.type.function.source.boo</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -144,18 +144,18 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.section.function.begin.boo</string>
+					<string>punctuation.section.function.begin.source.boo</string>
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>meta.function.boo</string>
+			<string>meta.function.source.boo</string>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>begin</key>
 					<string>(?=[A-Za-z_][A-Za-z0-9_]*)</string>
 					<key>contentName</key>
-					<string>entity.name.function.boo</string>
+					<string>entity.name.function.source.boo</string>
 					<key>end</key>
 					<string>(?![A-Za-z0-9_])</string>
 					<key>patterns</key>
@@ -178,7 +178,7 @@
 						</dict>
 					</dict>
 					<key>contentName</key>
-					<string>meta.function.parameters.boo</string>
+					<string>meta.function.parameters.source.boo</string>
 					<key>end</key>
 					<string>(?=\)\s*\:?)</string>
 					<key>patterns</key>
@@ -193,7 +193,7 @@
 								<key>1</key>
 								<dict>
 									<key>name</key>
-									<string>variable.parameter.function.boo</string>
+									<string>variable.parameter.function.source.boo</string>
 								</dict>
 								<key>2</key>
 								<dict>
@@ -203,7 +203,7 @@
 								<key>4</key>
 								<dict>
 									<key>name</key>
-									<string>punctuation.separator.parameters.boo</string>
+									<string>punctuation.separator.parameters.source.boo</string>
 								</dict>
 							</dict>
 							<key>match</key>
@@ -221,11 +221,11 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>storage.type.class.boo</string>
+					<string>storage.type.class.source.boo</string>
 				</dict>
 			</dict>
 			<key>contentName</key>
-			<string>entity.name.class.boo</string>
+			<string>entity.name.class.source.boo</string>
 			<key>end</key>
 			<string>\s*(:)</string>
 			<key>endCaptures</key>
@@ -233,11 +233,11 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.section.class.begin.boo</string>
+					<string>punctuation.section.class.begin.source.boo</string>
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>meta.class.old-style.boo</string>
+			<string>meta.class.old-style.source.boo</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -254,7 +254,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>storage.type.class.boo</string>
+					<string>storage.type.class.source.boo</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -269,23 +269,23 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.section.class.begin.boo</string>
+					<string>punctuation.section.class.begin.source.boo</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>invalid.illegal.missing-section-begin.boo</string>
+					<string>invalid.illegal.missing-section-begin.source.boo</string>
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>meta.class.boo</string>
+			<string>meta.class.source.boo</string>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>begin</key>
 					<string>(?=[A-Za-z_][A-Za-z0-9_]*)</string>
 					<key>contentName</key>
-					<string>entity.name.class.boo</string>
+					<string>entity.name.class.source.boo</string>
 					<key>end</key>
 					<string>(?![A-Za-z0-9_])</string>
 					<key>patterns</key>
@@ -308,7 +308,7 @@
 						</dict>
 					</dict>
 					<key>contentName</key>
-					<string>meta.class.inheritance.boo</string>
+					<string>meta.class.inheritance.source.boo</string>
 					<key>end</key>
 					<string>(?=\)|:)</string>
 					<key>patterns</key>
@@ -317,7 +317,7 @@
 							<key>begin</key>
 							<string>(?&lt;=\(|,)\s*</string>
 							<key>contentName</key>
-							<string>entity.other.inherited-class.boo</string>
+							<string>entity.other.inherited-class.source.boo</string>
 							<key>end</key>
 							<string>\s*(?:(,)|(?=\)))</string>
 							<key>endCaptures</key>
@@ -325,7 +325,7 @@
 								<key>1</key>
 								<dict>
 									<key>name</key>
-									<string>punctuation.separator.inheritance.boo</string>
+									<string>punctuation.separator.inheritance.source.boo</string>
 								</dict>
 							</dict>
 							<key>patterns</key>
