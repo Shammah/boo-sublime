@@ -129,7 +129,7 @@
                                  "name": "punctuation.separator.parameters.boo"
                              }
                          },
-                         "match": "\\b([a-zA-Z_][a-zA-Z_0-9]*)(?:\\s+(as)\\s+([a-zA-Z_][a-zA-Z_0-9]*))?\\s*(?:(,)|(?=[\\n\\)]))"
+                         "match": "\\b([a-zA-Z_][a-zA-Z_0-9]*)(?:\\s+(as)\\s+([a-zA-Z_(](?:[a-zA-Z_0-9.()]|\\[of [a-zA-Z_(][a-zA-Z_0-9.()]*\\])*))?\\s*(?:(,)|(?=[\\n\\)]))"
                      }
                  ]
              }
