@@ -117,14 +117,9 @@
 					<key>name</key>
 					<string>keyword.operator.source.boo</string>
 				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.source.boo</string>
-				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b([a-z_]+[A-Za-z_0-9]*( as ([A-Z]+[A-Za-z_0-9]*)))\b</string>
+			<string>\b([a-z_]+[A-Za-z_0-9]*\s+(as))\b</string>
 		</dict>
 		<dict>
 			<key>captures</key>
