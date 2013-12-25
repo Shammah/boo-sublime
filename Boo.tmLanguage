@@ -18,15 +18,39 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(and|or|not|isa|is|as|cast)\b</string>
+			<string>\b(isa|is|as|cast)\b</string>
 			<key>name</key>
-			<string>keyword.operator.source.boo</string>
+			<string>keyword.operator.types.source.boo</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\*|\b/\b|%|\+|-|\*\*|\^|\|=)</string>
+			<string>\b(and|or|not)\b</string>
 			<key>name</key>
-			<string>keyword.operator.source.boo</string>
+			<string>keyword.operator.logical.source.boo</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\*=|/=|%=|\+=|-=|\*\*=|&gt;&gt;=|&lt;&lt;=|&amp;=|\|=|\^=|\+\+|--)</string>
+			<key>name</key>
+			<string>keyword.operator.assignment.augmented.source.boo</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\*|/|%|\+|-|\*\*|&gt;&gt;|&lt;&lt;|&amp;|\||\^)</string>
+			<key>name</key>
+			<string>keyword.operator.arithmetic.source.boo</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(&lt;|&gt;|&lt;=|&gt;=|==|!=)</string>
+			<key>name</key>
+			<string>keyword.operator.comparison.source.boo</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(=)</string>
+			<key>name</key>
+			<string>keyword.operator.assignment.source.boo</string>
 		</dict>
 		<dict>
 			<key>match</key>

@@ -7,12 +7,34 @@
 	     "match": "\\b(import|from|if|else|elif|unless|for|in|while|continue|break|pass|return|override|struct|namespace|enum|try|raise|except|ensure|assert|yield|callable|goto|virtual|get|set|of|ref|unsafe|new|match|case|otherwise|debug|using|lock|block|macro|self|event)\\b"
 	  },
 
-	  {  "name": "keyword.operator.source.boo",
-	     "match": "\\b(and|or|not|isa|is|as|cast)\\b"
+	  {
+	     "match": "\\b(isa|is|as|cast)\\b",
+	     "name": "keyword.operator.types.source.boo"
 	  },
 
-	  {  "name": "keyword.operator.source.boo",
-	     "match": "(\\*|\\b/\\b|%|\\+|-|\\*\\*|\\^|\\|=)"
+	  {
+	     "match": "\\b(and|or|not)\\b",
+	     "name": "keyword.operator.logical.source.boo"
+	  },
+
+	  {
+	     "match": "(\\*=|/=|%=|\\+=|-=|\\*\\*=|>>=|<<=|&=|\\|=|\\^=|\\+\\+|--)",
+	     "name": "keyword.operator.assignment.augmented.source.boo"
+	  },
+
+	  {
+	     "match": "(\\*|/|%|\\+|-|\\*\\*|>>|<<|&|\\||\\^)",
+	     "name": "keyword.operator.arithmetic.source.boo"
+	  },
+
+	  {
+	     "match": "(<|>|<=|>=|==|!=)",
+	     "name": "keyword.operator.comparison.source.boo"
+	  },
+	  
+	  {
+	     "match": "(=)",
+	     "name": "keyword.operator.assignment.source.boo"
 	  },
 
 	  {  "name": "keyword.operator.source.boo",
