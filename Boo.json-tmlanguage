@@ -83,7 +83,7 @@
 	  },
 
 	  {  "name": "support.function.source.boo",
-	     "match": "\\b(print|gets|prompt|join|map|array|matrix|iterator|shellp|shell|shellm|super|enemurate|range|reversed|zip|cat|typeof|sizeof|len)\\b"
+	     "match": "\\b(print|enumerate|gets|prompt|join|map|array|matrix|iterator|shellp|shell|shellm|super|enemurate|range|reversed|zip|cat|typeof|sizeof|len)\\b"
 	  },
 
 	  {

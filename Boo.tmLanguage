@@ -124,7 +124,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(print|gets|prompt|join|map|array|matrix|iterator|shellp|shell|shellm|super|enemurate|range|reversed|zip|cat|typeof|sizeof|len)\b</string>
+			<string>\b(print|enumerate|gets|prompt|join|map|array|matrix|iterator|shellp|shell|shellm|super|enemurate|range|reversed|zip|cat|typeof|sizeof|len)\b</string>
 			<key>name</key>
 			<string>support.function.source.boo</string>
 		</dict>
