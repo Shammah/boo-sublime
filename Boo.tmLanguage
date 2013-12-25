@@ -250,13 +250,18 @@
 				</dict>
 				<dict>
 					<key>begin</key>
-					<string>(\()</string>
+					<string>(\()\s*(ref\b)?</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
 						<dict>
 							<key>name</key>
 							<string>keyword.operator.source.boo</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.control.source.boo</string>
 						</dict>
 					</dict>
 					<key>contentName</key>

@@ -161,10 +161,13 @@
                  "end": "(?![A-Za-z0-9_])"
              },
              {
-                 "begin": "(\\()",
+                 "begin": "(\\()\\s*(ref\\b)?",
                  "beginCaptures": {
                      "1": {
                          "name": "keyword.operator.source.boo"
+                     },
+                     "2": {
+                         "name": "keyword.control.source.boo"
                      }
                  },
                  "contentName": "meta.function.parameters.source.boo",
