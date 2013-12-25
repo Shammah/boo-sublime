@@ -140,7 +140,7 @@
                  "name": "storage.type.function.source.boo"
              }
          },
-         "end": "(\\))\\s*(?:(\\:?))",
+         "end": "(\\))\\s*(\\:?)",
          "endCaptures": {
              "1": {
                  "name": "keyword.operator.source.boo"
@@ -154,13 +154,47 @@
              {
                  "begin": "(?=[A-Za-z_][A-Za-z0-9_]*)",
                  "contentName": "entity.name.function.source.boo",
-                 "end": "(?![A-Za-z0-9_])",
+                 "end": "(?![A-Za-z0-9_])"
+             },
+             {
+                 "begin": "(\\()",
+                 "beginCaptures": {
+                     "1": {
+                         "name": "keyword.operator.source.boo"
+                     }
+                 },
+                 "contentName": "meta.function.parameters.source.boo",
+                 "end": "(?=\\)\\s*\\:?)",
                  "patterns": [
                      {
-                         "include": "#entity_name_function"
+                         "include": "#keyword_arguments"
+                     },
+                     {
+                         "include": "$self"
                      }
                  ]
+             }
+         ]
+	  },
+
+	  {
+         "begin": "\\b(def|do)(?=\\s*\\()",
+         "beginCaptures": {
+             "1": {
+                 "name": "storage.type.closure.source.boo"
+             }
+         },
+         "end": "(\\))\\s*(\\:)",
+         "endCaptures": {
+             "1": {
+                 "name": "keyword.operator.source.boo"
              },
+             "2": {
+                 "name": "keyword.operator.source.boo"
+             }
+         },
+         "name": "meta.function.source.boo",
+         "patterns": [
              {
                  "begin": "(\\()",
                  "beginCaptures": {
@@ -185,45 +219,6 @@
 	  {
 	     "match": "\\b(def|constructor|destructor)\\b",
 	     "name": "keyword.control.source.boo"
-	  },
-
-	  {
-         "begin": "\\b(def|do)(?=\\s*\\()",
-         "beginCaptures": {
-             "1": {
-                 "name": "keyword.control.closure.source.boo"
-             }
-         },
-         "end": "(\\))\\s*(?:(\\:?))",
-         "endCaptures": {
-             "1": {
-                 "name": "keyword.operator.source.boo"
-             },
-             "2": {
-                 "name": "keyword.operator.source.boo"
-             }
-         },
-         "name": "meta.function.source.boo",
-         "patterns": [
-             {
-                 "begin": "(\\()",
-                 "beginCaptures": {
-                     "1": {
-                         "name": "keyword.operator.source.boo"
-                     }
-                 },
-                 "contentName": "meta.function.parameters.source.boo",
-                 "end": "(?=\\)\\s*\\:?)",
-                 "patterns": [
-                     {
-                         "include": "#keyword_arguments"
-                     },
-                     {
-                         "include": "$self"
-                     }
-                 ]
-             }
-         ]
 	  },
 
 	  {

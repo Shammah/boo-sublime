@@ -216,7 +216,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>(\))\s*(?:(\:?))</string>
+			<string>(\))\s*(\:?)</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>1</key>
@@ -241,14 +241,66 @@
 					<string>entity.name.function.source.boo</string>
 					<key>end</key>
 					<string>(?![A-Za-z0-9_])</string>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>(\()</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.operator.source.boo</string>
+						</dict>
+					</dict>
+					<key>contentName</key>
+					<string>meta.function.parameters.source.boo</string>
+					<key>end</key>
+					<string>(?=\)\s*\:?)</string>
 					<key>patterns</key>
 					<array>
 						<dict>
 							<key>include</key>
-							<string>#entity_name_function</string>
+							<string>#keyword_arguments</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>$self</string>
 						</dict>
 					</array>
 				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\b(def|do)(?=\s*\()</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.closure.source.boo</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(\))\s*(\:)</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.source.boo</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.source.boo</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>meta.function.source.boo</string>
+			<key>patterns</key>
+			<array>
 				<dict>
 					<key>begin</key>
 					<string>(\()</string>
@@ -283,65 +335,6 @@
 			<string>\b(def|constructor|destructor)\b</string>
 			<key>name</key>
 			<string>keyword.control.source.boo</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>\b(def|do)(?=\s*\()</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.control.closure.source.boo</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>(\))\s*(?:(\:?))</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.operator.source.boo</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.operator.source.boo</string>
-				</dict>
-			</dict>
-			<key>name</key>
-			<string>meta.function.source.boo</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>begin</key>
-					<string>(\()</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>keyword.operator.source.boo</string>
-						</dict>
-					</dict>
-					<key>contentName</key>
-					<string>meta.function.parameters.source.boo</string>
-					<key>end</key>
-					<string>(?=\)\s*\:?)</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>#keyword_arguments</string>
-						</dict>
-						<dict>
-							<key>include</key>
-							<string>$self</string>
-						</dict>
-					</array>
-				</dict>
-			</array>
 		</dict>
 		<dict>
 			<key>begin</key>
