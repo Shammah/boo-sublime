@@ -122,21 +122,96 @@
 			<string>\b([a-z_]+[A-Za-z_0-9]*\s+(as))\b</string>
 		</dict>
 		<dict>
-			<key>captures</key>
+			<key>begin</key>
+			<string>\b(def)\s+(?=[A-Za-z_][A-Za-z0-9_]*\s*\()</string>
+			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
 				<dict>
 					<key>name</key>
 					<string>storage.type.function.boo</string>
 				</dict>
+			</dict>
+			<key>end</key>
+			<string>(\))\s*(?:(\:?))</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.source.boo</string>
+				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.function.boo</string>
+					<string>punctuation.section.function.begin.boo</string>
 				</dict>
 			</dict>
-			<key>match</key>
-			<string>\b(def)\s+([A-Za-z_][A-Za-z0-9_]*)</string>
+			<key>name</key>
+			<string>meta.function.boo</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>(?=[A-Za-z_][A-Za-z0-9_]*)</string>
+					<key>contentName</key>
+					<string>entity.name.function.boo</string>
+					<key>end</key>
+					<string>(?![A-Za-z0-9_])</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#entity_name_function</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>(\()</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.operator.source.boo</string>
+						</dict>
+					</dict>
+					<key>contentName</key>
+					<string>meta.function.parameters.boo</string>
+					<key>end</key>
+					<string>(?=\)\s*\:?)</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#keyword_arguments</string>
+						</dict>
+						<dict>
+							<key>captures</key>
+							<dict>
+								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>variable.parameter.function.boo</string>
+								</dict>
+								<key>2</key>
+								<dict>
+									<key>name</key>
+									<string>keyword.operator.source.boo</string>
+								</dict>
+								<key>4</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.separator.parameters.boo</string>
+								</dict>
+							</dict>
+							<key>match</key>
+							<string>\b([a-zA-Z_][a-zA-Z_0-9]*)(?:\s+(as)\s+([a-zA-Z_(].*?))?\s*(?:(,)|(?=\n|\)[:\s]))</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>begin</key>

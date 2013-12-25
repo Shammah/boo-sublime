@@ -72,13 +72,65 @@
 	     }
 	  },
 
-      {
-         "match": "\\b(def)\\s+([A-Za-z_][A-Za-z0-9_]*)",
-         "captures": {
-             "1": { "name": "storage.type.function.boo" },
-             "2": { "name": "entity.name.function.boo" }
-         }
-      },
+	  {
+         "begin": "\\b(def)\\s+(?=[A-Za-z_][A-Za-z0-9_]*\\s*\\()",
+         "beginCaptures": {
+             "1": {
+                 "name": "storage.type.function.boo"
+             }
+         },
+         "end": "(\\))\\s*(?:(\\:?))",
+         "endCaptures": {
+             "1": {
+                 "name": "keyword.operator.source.boo"
+             },
+             "2": {
+                 "name": "punctuation.section.function.begin.boo"
+             },
+         },
+         "name": "meta.function.boo",
+         "patterns": [
+             {
+                 "begin": "(?=[A-Za-z_][A-Za-z0-9_]*)",
+                 "contentName": "entity.name.function.boo",
+                 "end": "(?![A-Za-z0-9_])",
+                 "patterns": [
+                     {
+                         "include": "#entity_name_function"
+                     }
+                 ]
+             },
+             {
+                 "begin": "(\\()",
+                 "beginCaptures": {
+                     "1": {
+                         "name": "keyword.operator.source.boo"
+                     }
+                 },
+                 "contentName": "meta.function.parameters.boo",
+                 "end": "(?=\\)\\s*\\:?)",
+                 "patterns": [
+                     {
+                         "include": "#keyword_arguments"
+                     },
+                     {
+                         "captures": {
+                             "1": {
+                                 "name": "variable.parameter.function.boo"
+                             },
+                             "2": {
+                                 "name": "keyword.operator.source.boo"
+                             },
+                             "4": {
+                                 "name": "punctuation.separator.parameters.boo"
+                             }
+                         },
+                         "match": "\\b([a-zA-Z_][a-zA-Z_0-9]*)(?:\\s+(as)\\s+([a-zA-Z_(].*?))?\\s*(?:(,)|(?=\\n|\\)[:\\s]))"
+                     }
+                 ]
+             }
+         ]
+	  },
 
 	  {
 	      "begin": "^\\s*(class|interface)\\s+(?=[a-zA-Z_][a-zA-Z_0-9]*\\s*\\:)",
