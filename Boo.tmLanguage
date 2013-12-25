@@ -110,7 +110,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>variable.parameter.source.boo</string>
+					<string>variable.source.boo</string>
 				</dict>
 				<key>2</key>
 				<dict>
@@ -264,12 +264,6 @@
 					</array>
 				</dict>
 			</array>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b[a-z_]+[A-Za-z_0-9]*\b</string>
-			<key>name</key>
-			<string>variable.parameter.source.boo</string>
 		</dict>
 	</array>
 	<key>scopeName</key>

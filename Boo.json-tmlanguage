@@ -67,7 +67,7 @@
 	  {
 	     "match": "\\b([a-z_]+[A-Za-z_0-9]*\\s+(as))\\b",
 	     "captures": {
-	         "1": { "name": "variable.parameter.source.boo" },
+	         "1": { "name": "variable.source.boo" },
 	         "2": { "name": "keyword.operator.source.boo" }
 	     }
 	  },
@@ -161,11 +161,6 @@
 	              ]
 	          }
 	      ]
-	  },
-
-	  {
-	  	"name": "variable.parameter.source.boo",
-	  	"match": "\\b[a-z_]+[A-Za-z_0-9]*\\b"
 	  }
   ],
   "uuid": "40d7173c-d213-4009-938e-5249ec75849d"
