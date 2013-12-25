@@ -95,7 +95,7 @@
 	  },
 
 	  {
-	     "begin": "(?<=\\[)\\s*(Getter|Setter|Property)\\s*(?=\\()",
+	     "begin": "(?<=\\[)\\s*([Gg]etter|Setter|Property)\\s*(?=\\()",
          "beginCaptures": {
              "1": {
                  "name": "storage.type.property.source.boo"
@@ -133,7 +133,7 @@
          ]
 	  },
 	  {
-	     "match": "\\b(Getter|Setter|Property)\\b",
+	     "match": "\\b([Gg]etter|Setter|Property)\\b",
 	     "name": "storage.type.property.source.boo"
 	  },
 
