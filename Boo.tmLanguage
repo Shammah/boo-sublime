@@ -12,7 +12,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>\b(import|from|if|else|elif|unless|for|in|while|continue|break|pass|return|class|interface|def|override|struct|namespace|enum|try|raise|except|ensure|assert|yield|callable|goto|virtual|get|set|of|ref|unsafe|new|match|case|otherwise|debug|using|lock|block|macro|self|event)\b</string>
+			<string>\b(import|from|if|else|elif|unless|for|in|while|continue|break|pass|return|override|struct|namespace|enum|try|raise|except|ensure|assert|yield|callable|goto|virtual|get|set|of|ref|unsafe|new|match|case|otherwise|debug|using|lock|block|macro|self|event)\b</string>
 			<key>name</key>
 			<string>keyword.control.source.boo</string>
 		</dict>
@@ -125,6 +125,45 @@
 			</dict>
 			<key>match</key>
 			<string>\b([a-z_]+[A-Za-z_0-9]*( as ([A-Z]+[A-Za-z_0-9]*)))\b</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.function.boo</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.boo</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>\b(def)\s+([A-Za-z_][A-Za-z0-9_]*)</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.class.boo</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.class.boo</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>entity.other.inherited-class.boo</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>\b(class|interface)\s+([A-Za-z_][A-Za-z0-9_]*)\s*(\(([A-Za-z_][A-Za-z0-9_]*)\))?</string>
 		</dict>
 		<dict>
 			<key>match</key>
