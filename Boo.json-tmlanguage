@@ -144,6 +144,45 @@
 	  },
 
 	  {
+         "begin": "\\b(def|do)(?=\\s*\\()",
+         "beginCaptures": {
+             "1": {
+                 "name": "keyword.control.closure.source.boo"
+             }
+         },
+         "end": "(\\))\\s*(?:(\\:?))",
+         "endCaptures": {
+             "1": {
+                 "name": "keyword.operator.source.boo"
+             },
+             "2": {
+                 "name": "keyword.operator.source.boo"
+             }
+         },
+         "name": "meta.function.source.boo",
+         "patterns": [
+             {
+                 "begin": "(\\()",
+                 "beginCaptures": {
+                     "1": {
+                         "name": "keyword.operator.source.boo"
+                     }
+                 },
+                 "contentName": "meta.function.parameters.source.boo",
+                 "end": "(?=\\)\\s*\\:?)",
+                 "patterns": [
+                     {
+                         "include": "#keyword_arguments"
+                     },
+                     {
+                         "include": "$self"
+                     }
+                 ]
+             }
+         ]
+	  },
+
+	  {
 	      "begin": "^\\s*(class|interface)\\s+(?=[a-zA-Z_][a-zA-Z_0-9]*\\s*\\:)",
 	      "beginCaptures": {
 	          "1": {
