@@ -30,7 +30,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\(|\)|\[|\]|{|})</string>
+			<string>(\(|\)|\[|\]|{|}|:)</string>
 			<key>name</key>
 			<string>keyword.operator.source.boo</string>
 		</dict>
@@ -144,7 +144,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.section.function.begin.source.boo</string>
+					<string>keyword.operator.source.boo</string>
 				</dict>
 			</dict>
 			<key>name</key>
@@ -233,7 +233,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.section.class.begin.source.boo</string>
+					<string>keyword.operator.source.boo</string>
 				</dict>
 			</dict>
 			<key>name</key>
@@ -269,7 +269,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.section.class.begin.source.boo</string>
+					<string>keyword.operator.source.boo</string>
 				</dict>
 				<key>3</key>
 				<dict>

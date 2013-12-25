@@ -16,7 +16,7 @@
 	  },
 
 	  {  "name": "keyword.operator.source.boo",
-	     "match": "(\\(|\\)|\\[|\\]|{|})"
+	     "match": "(\\(|\\)|\\[|\\]|{|}|:)"
 	  },
 
 	  { "name": "comment.line.source.boo",
@@ -85,7 +85,7 @@
                  "name": "keyword.operator.source.boo"
              },
              "2": {
-                 "name": "punctuation.section.function.begin.source.boo"
+                 "name": "keyword.operator.source.boo"
              },
          },
          "name": "meta.function.source.boo",
@@ -143,7 +143,7 @@
 	      "end": "\\s*(:)",
 	      "endCaptures": {
 	          "1": {
-	              "name": "punctuation.section.class.begin.source.boo"
+	              "name": "keyword.operator.source.boo"
 	          }
 	      },
 	      "name": "meta.class.old-style.source.boo",
@@ -167,7 +167,7 @@
 	              "name": "keyword.operator.source.boo"
 	          },
 	          "2": {
-	              "name": "punctuation.section.class.begin.source.boo"
+	              "name": "keyword.operator.source.boo"
 	          },
 	          "3": {
 	              "name": "invalid.illegal.missing-section-begin.source.boo"
