@@ -1,0 +1,11 @@
+<snippet>
+	<tabTrigger>class</tabTrigger>
+    <description>Define sub-class</description>
+    <scope>source.boo</scope>
+
+	<content><![CDATA[
+class ${1:myClass}(${2:BaseClass}):
+	${3:pass}
+]]></content>
+
+</snippet>

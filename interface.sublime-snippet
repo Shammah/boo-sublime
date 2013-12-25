@@ -1,0 +1,11 @@
+<snippet>
+	<tabTrigger>interface</tabTrigger>
+    <description>Define interface</description>
+    <scope>source.boo</scope>
+
+	<content><![CDATA[
+interface ${1:myInterface}:
+	${3:pass}
+]]></content>
+
+</snippet>
