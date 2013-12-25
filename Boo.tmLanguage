@@ -187,28 +187,6 @@
 							<key>include</key>
 							<string>#keyword_arguments</string>
 						</dict>
-						<dict>
-							<key>captures</key>
-							<dict>
-								<key>1</key>
-								<dict>
-									<key>name</key>
-									<string>variable.parameter.function.source.boo</string>
-								</dict>
-								<key>2</key>
-								<dict>
-									<key>name</key>
-									<string>keyword.operator.source.boo</string>
-								</dict>
-								<key>4</key>
-								<dict>
-									<key>name</key>
-									<string>punctuation.separator.parameters.source.boo</string>
-								</dict>
-							</dict>
-							<key>match</key>
-							<string>\b([a-zA-Z_][a-zA-Z_0-9]*)(?:\s+(as)\s+([a-zA-Z_(].*?))?\s*(?:(,)|(?=\n|\)[:\s]))</string>
-						</dict>
 					</array>
 				</dict>
 			</array>
@@ -341,6 +319,39 @@
 			</array>
 		</dict>
 	</array>
+	<key>repository</key>
+	<dict>
+		<key>keyword_arguments</key>
+		<dict>
+			<key>begin</key>
+			<string>\b([a-zA-Z_][a-zA-Z_0-9]*)\s*</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.function.python</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\s*(?:(,)|(?=\n|\)[:\s]))</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.separator.parameters.python</string>
+				</dict>
+			</dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>$self</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
 	<key>scopeName</key>
 	<string>source.boo</string>
 	<key>uuid</key>

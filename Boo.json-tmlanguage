@@ -86,7 +86,7 @@
              },
              "2": {
                  "name": "keyword.operator.source.boo"
-             },
+             }
          },
          "name": "meta.function.source.boo",
          "patterns": [
@@ -112,20 +112,6 @@
                  "patterns": [
                      {
                          "include": "#keyword_arguments"
-                     },
-                     {
-                         "captures": {
-                             "1": {
-                                 "name": "variable.parameter.function.source.boo"
-                             },
-                             "2": {
-                                 "name": "keyword.operator.source.boo"
-                             },
-                             "4": {
-                                 "name": "punctuation.separator.parameters.source.boo"
-                             }
-                         },
-                         "match": "\\b([a-zA-Z_][a-zA-Z_0-9]*)(?:\\s+(as)\\s+([a-zA-Z_(].*?))?\\s*(?:(,)|(?=\\n|\\)[:\\s]))"
                      }
                  ]
              }
@@ -215,5 +201,27 @@
 	      ]
 	  }
   ],
+  "repository": {
+	  "keyword_arguments": {
+	      "begin": "\\b([a-zA-Z_][a-zA-Z_0-9]*)\\s*",
+	      "beginCaptures": {
+	          "1": {
+	              "name": "variable.parameter.function.python"
+	          }
+	      },
+	      "end": "\\s*(?:(,)|(?=\\n|\\)[:\\s]))",
+	      "endCaptures": {
+	          "1": {
+	              "name": "punctuation.separator.parameters.python"
+	          }
+	      },
+	      "patterns": [
+	          {
+	              "include": "$self"
+	          }
+	      ]
+	  }
+  },
+
   "uuid": "40d7173c-d213-4009-938e-5249ec75849d"
 }
