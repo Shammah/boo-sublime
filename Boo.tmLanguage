@@ -220,6 +220,12 @@
 			</array>
 		</dict>
 		<dict>
+			<key>match</key>
+			<string>\b(def|constructor|destructor)\b</string>
+			<key>name</key>
+			<string>keyword.control.source.boo</string>
+		</dict>
+		<dict>
 			<key>begin</key>
 			<string>\b(def|do)(?=\s*\()</string>
 			<key>beginCaptures</key>

@@ -144,6 +144,11 @@
 	  },
 
 	  {
+	     "match": "\\b(def|constructor|destructor)\\b",
+	     "name": "keyword.control.source.boo"
+	  },
+
+	  {
          "begin": "\\b(def|do)(?=\\s*\\()",
          "beginCaptures": {
              "1": {
