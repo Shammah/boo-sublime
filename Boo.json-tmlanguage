@@ -112,6 +112,9 @@
                  "patterns": [
                      {
                          "include": "#keyword_arguments"
+                     },
+                     {
+                         "include": "$self"
                      }
                  ]
              }

@@ -187,6 +187,10 @@
 							<key>include</key>
 							<string>#keyword_arguments</string>
 						</dict>
+						<dict>
+							<key>include</key>
+							<string>$self</string>
+						</dict>
 					</array>
 				</dict>
 			</array>
