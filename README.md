@@ -1,18 +1,19 @@
-Boo for Sublime Text 2
-===========
+Boo for Sublime Text
+====================
 
-Boo programming language integration (syntax highlighting) for Sublime Text 2.
+Boo programming language integration (syntax highlighting) for Sublime Text (2 & 3).
 Contains a few snippets and a build system as well.
 
 Installation
 ============
 
-Install using Package Control [1] or download/clone into your Sublime Text 2 package directory.
+Install using Package Control [1] or download/clone into your Sublime Text package directory.
 Make sure you place a path in the windows PATH to the boo compiler.
 
-Author
-======
+Authors
+=======
 
 Shammah - http://www.protoman.net
+Ofer Reichman - http://oferei.com
 
 [1] http://wbond.net/sublime_packages/package_control
