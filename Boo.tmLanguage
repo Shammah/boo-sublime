@@ -566,7 +566,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>variable.parameter.function.python</string>
+					<string>variable.parameter.function.json</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -576,7 +576,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.separator.parameters.python</string>
+					<string>punctuation.separator.parameters.json</string>
 				</dict>
 			</dict>
 			<key>patterns</key>
