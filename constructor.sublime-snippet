@@ -1,0 +1,11 @@
+<snippet>
+	<tabTrigger>def</tabTrigger>
+    <description>Define constructor</description>
+    <scope>source.boo</scope>
+
+	<content><![CDATA[
+def constructor(${1:parameters}):
+	${2:pass}
+]]></content>
+
+</snippet>

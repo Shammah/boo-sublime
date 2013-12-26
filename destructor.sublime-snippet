@@ -1,0 +1,11 @@
+<snippet>
+	<tabTrigger>def</tabTrigger>
+    <description>Define destructor</description>
+    <scope>source.boo</scope>
+
+	<content><![CDATA[
+def destructor(${1:parameters}):
+	${2:pass}
+]]></content>
+
+</snippet>
