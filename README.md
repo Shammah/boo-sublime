@@ -14,6 +14,7 @@ Authors
 =======
 
 Shammah - http://www.protoman.net
+
 Ofer Reichman - http://oferei.com
 
 [1] http://wbond.net/sublime_packages/package_control
