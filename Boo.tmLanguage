@@ -129,23 +129,6 @@
 			<string>support.function.source.boo</string>
 		</dict>
 		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>variable.source.boo</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.operator.source.boo</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>\b([a-z_]+[A-Za-z_0-9]*\s+(as))\b</string>
-		</dict>
-		<dict>
 			<key>begin</key>
 			<string>(?&lt;=\[)\s*([Gg]etter|Setter|Property)\s*(?=\()</string>
 			<key>beginCaptures</key>
@@ -553,6 +536,23 @@
 			<string>\b(class|interface|struct)\b</string>
 			<key>name</key>
 			<string>storage.type.class.source.boo</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>variable.source.boo</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.source.boo</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>\b([a-z_]+[A-Za-z_0-9]*\s+(as))\b</string>
 		</dict>
 	</array>
 	<key>repository</key>

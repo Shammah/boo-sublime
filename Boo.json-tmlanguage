@@ -87,14 +87,6 @@
 	  },
 
 	  {
-	     "match": "\\b([a-z_]+[A-Za-z_0-9]*\\s+(as))\\b",
-	     "captures": {
-	         "1": { "name": "variable.source.boo" },
-	         "2": { "name": "keyword.operator.source.boo" }
-	     }
-	  },
-
-	  {
 	     "begin": "(?<=\\[)\\s*([Gg]etter|Setter|Property)\\s*(?=\\()",
          "beginCaptures": {
              "1": {
@@ -364,6 +356,14 @@
 	     "match": "\\b(class|interface|struct)\\b",
 	     "name": "storage.type.class.source.boo"
 	  },
+
+	  {
+	     "match": "\\b([a-z_]+[A-Za-z_0-9]*\\s+(as))\\b",
+	     "captures": {
+	         "1": { "name": "variable.source.boo" },
+	         "2": { "name": "keyword.operator.source.boo" }
+	     }
+	  }
   ],
   "repository": {
 	  "keyword_arguments": {
