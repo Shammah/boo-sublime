@@ -48,7 +48,7 @@
 	  },
 
 	  {  "name": "keyword.operator.source.boo",
-	     "match": "(\\(|\\)|\\[|\\]|{|}|:)"
+	     "match": "(\\(|\\)|\\[|\\]|{|}|:|,)"
 	  },
 
 	  {  "name": "constant.numeric.source.boo",
