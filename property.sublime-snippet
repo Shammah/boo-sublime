@@ -1,13 +1,12 @@
 <snippet>
 	<tabTrigger>property</tabTrigger>
-    <description>Create a property</description>
+    <description>Create a property with getter and setter</description>
     <scope>source.boo</scope>
 
 	<content><![CDATA[
 ${1:MyProperty} as ${2:type}:
 	get:
 		${3:pass}
-
 	set:
 		${4:pass}
 ]]></content>

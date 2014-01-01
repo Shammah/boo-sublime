@@ -1,0 +1,11 @@
+<snippet>
+	<tabTrigger>property</tabTrigger>
+    <description>Create a simple property</description>
+    <scope>source.boo</scope>
+
+	<content><![CDATA[
+[Property(${1:properyName})]
+${2:_fieldName} as ${3:type}
+]]></content>
+
+</snippet>
